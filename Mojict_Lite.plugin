@@ -1,0 +1,21 @@
+#!name = Mojict精简
+#!desc = 精简Moji辞典页面
+#!openUrl = https://apps.apple.com/app/id1021094295
+#!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Moji/Finka.png
+#!tag = 页面精简
+#!author = Mojit000[https://github.com/Mojit000]
+#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
+
+[Rule]
+
+
+[Rewrite]
+# 精简：小课堂
+^https:\/\/api\.mojidict\.com\/parse\/functions\/resrcPos-fetchPublished reject-dict
+
+[Script]
+
+
+[MITM]
+hostname = api.mojidict.com
+
