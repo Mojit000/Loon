@@ -1,20 +1,18 @@
 #!name = MoJiDict精简
 #!desc = 精简Moji辞典小课堂
 #!openUrl = https://apps.apple.com/app/id1021094295
-#!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Moji/Finka.png
+#!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Moji/icon.png
 #!tag = 页面精简
 #!author = Mojit000[https://github.com/Mojit000]
 #!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
 
 [Rule]
 
-
 [Rewrite]
 # 精简：小课堂
 ^https:\/\/api\.mojidict\.com\/parse\/functions\/resrcPos-fetchPublished reject-dict
 
 [Script]
-
 
 [MITM]
 hostname = api.mojidict.com
