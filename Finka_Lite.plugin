@@ -1,0 +1,46 @@
+#!name = 翻咔去广告
+#!desc = 移除开屏广告、商品信息流广告、搜索栏填充词、我的页面推广横幅。
+#!openUrl = https://apps.apple.com/app/id898533490
+#!icon=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/FleaMarket.png
+#!tag = 去广告
+#!author = 可莉🅥[https://github.com/luestr], ZenMoFiShi[https://github.com/ZenmoFeiShi], RuCu6[https://github.com/RuCu6]
+#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
+
+[Rule]
+
+
+[Rewrite]
+# 精简：资料页面
+^https:\/\/api\.finka\.cn\/profile\/info\/v2\? reject-dict
+# 私信：新的匹配
+# ^https:\/\/api\.finka\.cn\/inbox\/match\/newest\? reject-dict
+# 广告屏蔽
+^https:\/\/api\.finka\.cn\/ad\/? reject-dict
+^https:\/\/api\.finka\.cn\/ad\/list\? reject-dict
+# VIP 
+^https:\/\/api\.finka\.cn\/billing\/vip\/pay-page\? reject-dict
+# 动态：直播Banner
+^https:\/\/api\.finka\.cn\/recommend\/other reject-dict
+# 动态：热门
+# https://api.finka.cn/post/rcmd/list?
+# 直播
+# ^https:\/\/api\.finka\.cn\/recommend\/live reject-dict
+# ^https:\/\/api\.finka\.cn\/recommend\/followInTab reject-dict
+
+# 语音聊天室
+^https:\/\/api\.finka\.cn\/audio-live\/quick-access reject-dict
+^https:\/\/api\.finka\.cn\/audio-live\/list reject-dict
+
+[Script]
+# 移除直播：推荐、语音房标签
+http-response ^https:\/\/api\.finka\.cn\/recommend\/live\/tabConfig script-path = https://raw.githubusercontent.com/Mojit000/Rewrite/refs/heads/main/Finka.js, requires-body = true, tag = 移除推荐、语音房标签
+
+# 移除私信：官方助手信息标签
+http-response ^https:\/\/api\.finka\.cn\/group\/session\? script-path = https://raw.githubusercontent.com/Mojit000/Rewrite/refs/heads/main/Finka_Chat.js, requires-body = true, tag = 移除私信：官方助手信息标签
+
+# 移除动态：彩虹A+会员推荐
+http-response ^https:\/\/api\.finka\.cn\/feed\/v5\? script-path = https://raw.githubusercontent.com/Mojit000/Rewrite/refs/heads/main/Finka_Constants.js, requires-body = true, tag = 移除动态：彩虹A+会员推荐
+
+[MITM]
+hostname = api.finka.cn
+
