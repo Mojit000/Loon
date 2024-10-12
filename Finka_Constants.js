@@ -11,5 +11,3 @@ if (url.includes("/constants/ios")) {
 }
 
 $done({ body: JSON.stringify(obj) });
-
-https://api.finka.cn/
