@@ -6,7 +6,7 @@ let obj = JSON.parse($response.body);
 if (url.includes("/feed/v5")) {
     if (obj.data && obj.data.list) {
         // 过滤掉动态为彩虹A+会员推荐
-        obj.data.list = obj.data.list.filter(constant => constant.hasOwnProperty("description"));
+        obj.data.list = obj.data.list.filter(item => item.hasOwnProperty("description") && !("boosting" in item));
     }
 }
 
