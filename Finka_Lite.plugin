@@ -33,13 +33,13 @@
 
 [Script]
 # 移除直播：推荐、语音房标签
-http-response ^https:\/\/api\.finka\.cn\/recommend\/live\/tabConfig script-path = https://raw.githubusercontent.com/Mojit000/Rewrite/refs/heads/main/Finka.js, requires-body = true, tag = 移除推荐、语音房标签
+http-response ^https:\/\/api\.finka\.cn\/recommend\/live\/tabConfig script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka.js, requires-body = true, tag = 移除推荐、语音房标签
 
 # 移除私信：官方助手信息标签
-http-response ^https:\/\/api\.finka\.cn\/group\/session\? script-path = https://raw.githubusercontent.com/Mojit000/Rewrite/refs/heads/main/Finka_Chat.js, requires-body = true, tag = 移除私信：官方助手信息标签
+http-response ^https:\/\/api\.finka\.cn\/group\/session\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka_Chat.js, requires-body = true, tag = 移除私信：官方助手信息标签
 
 # 移除动态：彩虹A+会员推荐
-http-response ^https:\/\/api\.finka\.cn\/feed\/v5\? script-path = https://raw.githubusercontent.com/Mojit000/Rewrite/refs/heads/main/Finka_Constants.js, requires-body = true, tag = 移除动态：彩虹A+会员推荐
+http-response ^https:\/\/api\.finka\.cn\/feed\/v5\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka_Constants.js, requires-body = true, tag = 移除动态：彩虹A+会员推荐
 
 [MITM]
 hostname = api.finka.cn
