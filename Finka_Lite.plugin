@@ -1,9 +1,9 @@
 #!name = 翻咔去广告
 #!desc = 移除直播：推荐、语音房标签；私信：官方助手信息标签；动态：彩虹A+会员推荐
 #!openUrl = https://apps.apple.com/app/id898533490
-#!icon=https://github.com/Mojit000/Loon/blob/main/%E7%BF%BB%E5%92%94-%E9%81%87%E8%A7%81%E4%BD%A0%E7%9A%84%E6%80%A6%E7%84%B6%E5%BF%83%E5%8A%A8.png?raw=true
+#!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka.png
 #!tag = 去广告
-#!author = 可莉🅥[https://github.com/luestr], ZenMoFiShi[https://github.com/ZenmoFeiShi], RuCu6[https://github.com/RuCu6]
+#!author = Mojit000[https://github.com/Mojit000]
 #!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
 
 [Rule]
