@@ -4,7 +4,7 @@ if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
 if (url.includes("/api/v4/my/center")) {
-  if (obj.data && obj.data.floors) {
+  if (obj.data) {
     // 精简“我的”
     obj.data.aggregations = null
     obj.data.banners = null
