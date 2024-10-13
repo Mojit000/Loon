@@ -13,6 +13,9 @@
 ^https:\/\/gapi\.guanaitong\.com\/api\/v1\/home\/rec\? url reject-dict
 # 精简：首页“AI助手”
 ^https:\/\/m\.igeidao\.com\/give-llm-ai\/v1\/ai\/chat_init reject-dict
+^https:\/\/gapi\.guanaitong\.com\/api2\/v2\/ai\/entry reject-dict
+
+hostname = gapi.guanaitong.com
 
 [Script]
 # 精简：首页Banner
