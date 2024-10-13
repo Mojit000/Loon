@@ -75,6 +75,7 @@ if (url.includes("/api/v8/home/cms")) {
   if (obj.data && obj.data.floors) {
     // 精简首页
     obj.data.floors = lite_floors
+    obj.data.default_expand = null
   }
 }
 
