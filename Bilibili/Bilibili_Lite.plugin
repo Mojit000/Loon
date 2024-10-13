@@ -1,11 +1,10 @@
 #!name = Bilibili Lite
 #!desc = 精简 Bilibili 国际版“我的”页面
-#!openUrl = https://apps.apple.com/app/id1548857482
+#!openUrl = https://apps.apple.com/app/id1517062289
 #!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Bilibili/icon.png
 #!tag = 页面精简
 #!author = Mojit000[https://github.com/Mojit000]
 #!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
-
 [Rule]
 
 [Rewrite]
