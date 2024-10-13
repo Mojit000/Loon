@@ -5,7 +5,7 @@ let obj = JSON.parse($response.body);
 
 if (url.includes("/ticktocks/users")) {
     if (obj.data) {
-        // 体重大于75kg，年龄在28-40岁通讯录的动态
+        // 仅保留体重小于75kg，年龄在28-40岁通讯录的动态
         obj.data.list = obj.data.filter(item => item.weight > 75 && (item.age < 28 || item.age > 40));
     }
 }
