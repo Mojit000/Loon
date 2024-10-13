@@ -1,5 +1,5 @@
 #!name = 给到商场
-#!desc = 移除首页“热门精选”、“热门活动”、“热门商场”，移除我的“广告”
+#!desc = 移除首页“热门精选”、“热门活动”、“热门商场”、“AI助手”，移除我的“广告”
 #!openUrl = https://apps.apple.com/app/id1084660392
 #!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/icon.jpeg
 #!tag = 页面精简
