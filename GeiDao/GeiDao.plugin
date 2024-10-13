@@ -1,0 +1,26 @@
+#!name = 给到商场
+#!desc = 移除首页“热门精选”、“热门活动”、“热门商场”，移除我的“广告”
+#!openUrl = https://apps.apple.com/app/id1084660392
+#!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/icon.jpeg
+#!tag = 页面精简
+#!author = Mojit000[https://github.com/Mojit000]
+#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
+
+[Rule]
+
+
+[Rewrite]
+# 精简：首页“热门精选”
+^https:\/\/gapi\.guanaitong\.com\/api\/v1\/home\/rec\? url reject-dict
+
+
+[Script]
+# 精简：首页Banner
+http-response ^https:\/\/gapi\.guanaitong\.com\/api\/v8\/home\/cms script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/Homepage.js, requires-body = true, tag = 精简：首页
+
+# 精简：我的
+http-response ^https:\/\/gapi\.guanaitong\.com\/api\/v4\/my\/center script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/Profile.js, requires-body = true, tag = 精简：我的
+
+[MITM]
+hostname = gapi.guanaitong.com
+
