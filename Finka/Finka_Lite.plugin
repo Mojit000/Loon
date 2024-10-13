@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 精简：资料页面
-^https:\/\/api\.finka\.cn\/profile\/info\/v2\? reject-dict
+# ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? reject-dict
 # 私信：新的匹配
 # ^https:\/\/api\.finka\.cn\/inbox\/match\/newest\? reject-dict
 # 广告屏蔽
