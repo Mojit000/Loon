@@ -25,9 +25,9 @@ http-response ^https:\/\/gapi\.guanaitong\.com\/api\/v8\/home\/cms script-path =
 http-response ^https:\/\/gapi\.guanaitong\.com\/api\/v4\/my\/center script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/Profile.js, requires-body = true, tag = 精简：我的“广告”
 http-response ^https:\/\/gapi\.guanaitong\.com\/api\/v1\/my\/user_profile script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/Profile_v2.js, requires-body = true, tag = 精简：悬浮的“有奖推荐”
 
-# 精简：热门商场顶部的轮播
-http-response ^https:\/\/gapi\.guanaitong\.com\/api\/v1\/home\/display_zone\?type=2 script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/Hot_Market.js, requires-body = true, tag = 精简：热门商场顶部的轮播
-http-response ^https:\/\/gapi\.guanaitong\.com\/api\/v2\/common\/cms_custom_data\?page_name=privilege script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/Hot_Market.js, requires-body = true, tag = 精简：热门商场顶部的轮播
+# 精简：商场顶部的轮播
+http-response ^https:\/\/gapi\.guanaitong\.com\/api\/v1\/home\/display_zone\?type=2 script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/Hot_Market.js, requires-body = true, tag = 精简：首页标签页热门商场顶部的轮播
+http-response ^https:\/\/gapi\.guanaitong\.com\/api\/v2\/common\/cms_custom_data\?page_name=privilege script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/Hot_Market.js, requires-body = true, tag = 精简：商场标签页商场顶部的轮播
 
 [MITM]
 hostname = gapi.guanaitong.com
