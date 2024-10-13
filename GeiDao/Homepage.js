@@ -75,30 +75,6 @@ const lite_floors = [
           "app_id": 15001709,
           "link_url": "gatgive://page.gat/web?url=https%3A%2F%2Ft.guanaitong.com%2FWCpqRhIs",
           "img_url": "https://file.guanaitong.com/grus-gfs/product/app-mgr/by-days/2024-01-16/5fc83db39e98939e71c4301dfe44c6bd.png"
-        },
-        {
-          "track_app_id": "15003110",
-          "status": 2,
-          "title": "奈雪の茶代金券",
-          "app_id": 1811526,
-          "link_url": "gatgive://page.gat/web?url=https%3A%2F%2Ft.guanaitong.com%2F6JETXjGg",
-          "img_url": "https://file.guanaitong.com/grus-gfs/product/app-mgr/by-days/2022-10-28/f7d9982c7afdb77626e736c54bef8075.png"
-        },
-        {
-          "track_app_id": "20091470",
-          "status": 2,
-          "title": "肯德基",
-          "app_id": 800121,
-          "link_url": "gatgive://page.gat/web?url=https%3A%2F%2Ft.guanaitong.com%2FjxeMu0dp",
-          "img_url": "http://img1.guanaitong.com/grus-gfs/product/app-mgr/by-days/2020-06-23/a7badf82a51f4e93dafe884507ee3d3d.png"
-        },
-        {
-          "track_app_id": "15003098",
-          "status": 2,
-          "title": "WPS会员卡",
-          "app_id": 1331487,
-          "link_url": "gatgive://page.gat/web?url=https%3A%2F%2Ft.guanaitong.com%2FuCaIyyvs",
-          "img_url": "https://file.guanaitong.com/grus-gfs/product/app-mgr/by-days/2022-11-04/778f7cfe3957ebbabf1b2c4f7e75cf3e.png"
         }
       ]
     }
