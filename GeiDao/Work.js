@@ -35,4 +35,10 @@ if (url.includes("/give-health-api/home")) {
   }
 }
 
+if (url.includes("/incentive_api/home/education_data")) {
+  if (obj.data) {
+    obj.data = null
+  }
+}
+
 $done({ body: JSON.stringify(obj) });
