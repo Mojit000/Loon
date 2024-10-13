@@ -40,5 +40,10 @@ if (url.includes("/incentive_api/home/education_data")) {
     obj.data = null
   }
 }
+if (url.includes("/incentive_api/home/subscribe_apps")) {
+  if (obj.data) {
+    obj.data = null
+  }
+}
 
 $done({ body: JSON.stringify(obj) });
