@@ -5,7 +5,7 @@ let obj = JSON.parse($response.body);
 
 if (url.includes("/api/v1/home/display_zone?type=2")) {
     if (obj.data && obj.data.sections) {
-        // 过滤掉tab为"语音房"的tab
+        // 过滤掉热门商场顶部的轮播
         obj.data.sections = obj.data.sections.filter(item => item.biz_type !== "banners");
     }
 }
