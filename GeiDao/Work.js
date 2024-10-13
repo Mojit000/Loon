@@ -44,7 +44,6 @@ if (url.includes("/incentive_api/home/subscribe_apps")) {
   if (obj.data && obj.data.apps) {
     obj.data.apps[0].show = false
     obj.data.show_intro = false
-    obj.data.banner_img = ""
   }
 }
 
