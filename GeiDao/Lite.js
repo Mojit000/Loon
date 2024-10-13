@@ -1,5 +1,3 @@
-
-
 // 2024-10-12 21:02:25
 const url = $request.url;
 if (!$response.body) $done({});
@@ -73,8 +71,7 @@ const lite_floors = [
   }
 ]
 
-
-if (url.includes("/account/mine")) {
+if (url.includes("/api/v8/home/cms")) {
   if (obj.data && obj.data.floors) {
     // 精简首页
     obj.data.floors = lite_floors
