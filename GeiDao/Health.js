@@ -4,7 +4,7 @@ if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 const array = [
       {
-        "sort": 5,
+        "sort": 3,
         "link_url": "https://openapi.guanaitong.com/inner/trustLogin?redirectUrl=https://xintan.guanaitong.com/user/gatauth",
         "id": null,
         "child_app_id": null,
@@ -14,7 +14,7 @@ const array = [
         "desc": null
       },
       {
-        "sort": 6,
+        "sort": 5,
         "link_url": "https://a.guanaitong.com/daxin/front/psych_list?source=!@8$1234",
         "id": null,
         "child_app_id": null,
@@ -29,6 +29,7 @@ if (url.includes("/give-health-api/home")) {
   if (obj.data) {
     // 精简“健康馆”
     obj.data.health_app = obj.data.health_app.concat(array)
+    obj.data.health_app = obj.data.health_app.filter(item => item.title !== "每日一答");
     obj.data.goods = null
     obj.data.psy_health = null
   }
