@@ -5,6 +5,7 @@
 #!tag = 页面精简
 #!author = Mojit000[https://github.com/Mojit000]
 #!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
+
 [Rule]
 
 [Rewrite]
