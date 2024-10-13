@@ -10,19 +10,19 @@
 
 
 [Rewrite]
-# 精简：资料页面
-# ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? reject-dict
 # 私信：新的匹配
-# ^https:\/\/api\.finka\.cn\/inbox\/match\/newest\? reject-dict
+^https:\/\/api\.finka\.cn\/inbox\/match\/newest\? reject-dict
+
 # 广告屏蔽
 ^https:\/\/api\.finka\.cn\/ad\/? reject-dict
 ^https:\/\/api\.finka\.cn\/ad\/list\? reject-dict
+
 # VIP 
 ^https:\/\/api\.finka\.cn\/billing\/vip\/pay-page\? reject-dict
+
 # 动态：直播Banner
 ^https:\/\/api\.finka\.cn\/recommend\/other reject-dict
-# 动态：热门
-# https://api.finka.cn/post/rcmd/list?
+
 # 直播
 # ^https:\/\/api\.finka\.cn\/recommend\/live reject-dict
 # ^https:\/\/api\.finka\.cn\/recommend\/followInTab reject-dict
