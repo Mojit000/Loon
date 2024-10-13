@@ -1,0 +1,23 @@
+#!name = Blued精简
+#!desc = 精简Blued动态页面，仅保留年龄28岁以上的通讯录动态
+#!openUrl = https://apps.apple.com/app/id1451025748
+#!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Blued/icon.png
+#!tag = 页面精简
+#!author = Mojit000[https://github.com/Mojit000]
+#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
+
+[Rule]
+
+
+[Rewrite]
+# 精简：身边页面推荐直播
+^https:\/\/argo\.blued\.cn\/users\/recommend reject-dict
+
+[Script]
+# 精简Blued动态页面
+http-response ^https:\/\/argo\.blued\.cn\/ticktocks\/users\/102835986\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Blued/Blued_lite.js, requires-body = true, tag = 精简Blued动态页面
+
+
+[MITM]
+hostname = argo.blued.cn
+
