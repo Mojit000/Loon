@@ -7,13 +7,13 @@ let obj = JSON.parse($response.body);
 const lite_sections_v2 = [
   {
     "items": [
-      {
-        "id": 494,
-        "title": "离线缓存",
-        "icon": "http://i0.hdslb.com/bfs/archive/5fc84565ab73e716d20cd2f65e0e1de9495d56f8.png",
-        "common_op_item": {},
-        "uri": "bilibili://user_center/download"
-      },
+      // {
+      //   "id": 494,
+      //   "title": "离线缓存",
+      //   "icon": "http://i0.hdslb.com/bfs/archive/5fc84565ab73e716d20cd2f65e0e1de9495d56f8.png",
+      //   "common_op_item": {},
+      //   "uri": "bilibili://user_center/download"
+      // },
       {
         "id": 495,
         "title": "历史记录",
