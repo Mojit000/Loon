@@ -16,7 +16,6 @@ if (url.includes("/api/v2/common/cms_custom_data?page_name=privilege")) {
         obj.data.floors = obj.data.floors.filter(item => item.resource_module_name !== "顶部轮播");
     }
 }
-https://gapi.guanaitong.com/api/v2/common/cms_custom_data?page_name=privilege
 
 $done({ body: JSON.stringify(obj) });
 
