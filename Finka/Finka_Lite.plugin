@@ -41,6 +41,9 @@ http-response ^https:\/\/api\.finka\.cn\/group\/session\? script-path = https://
 # 移除动态：彩虹A+会员推荐
 http-response ^https:\/\/api\.finka\.cn\/feed\/v5\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Constants.js, requires-body = true, tag = 移除动态：彩虹A+会员推荐
 
+# 精简资料页面
+http-response ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Profile.js, requires-body = true, tag = 精简资料页面
+
 [MITM]
 hostname = api.finka.cn
 
