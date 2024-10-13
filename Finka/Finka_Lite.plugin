@@ -1,8 +1,8 @@
-#!name = 翻咔去广告
-#!desc = 移除直播：推荐、语音房标签；私信：官方助手信息标签；动态：彩虹A+会员推荐
+#!name = 翻咔 Lite
+#!desc = 移除直播：推荐、语音房标签；私信：官方助手信息标签；动态：彩虹A+会员推荐；资料页面精简
 #!openUrl = https://apps.apple.com/app/id898533490
 #!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Finka.png
-#!tag = 去广告
+#!tag = 页面精简
 #!author = Mojit000[https://github.com/Mojit000]
 #!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
 
