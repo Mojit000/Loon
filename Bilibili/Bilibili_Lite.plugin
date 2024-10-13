@@ -1,13 +1,18 @@
-// 2024-10-12 21:02:25
-const url = $request.url;
-if (!$response.body) $done({});
-let obj = JSON.parse($response.body);
+#!name = Bilibili Lite
+#!desc = 精简 Bilibili 国际版“我的”页面
+#!openUrl = https://apps.apple.com/app/id1548857482
+#!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Bilibili/icon.png
+#!tag = 页面精简
+#!author = Mojit000[https://github.com/Mojit000]
+#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
 
-if (url.includes("/account/mine")) {
-    if (obj.data && obj.data.sections_v2) {
-        // 精简我的页面
-        obj.data.sections_v2 = [obj.data.sections_v2[0]]
-    }
-}
+[Rule]
 
-$done({ body: JSON.stringify(obj) });
+[Rewrite]
+
+[Script]
+# 精简 Bilibili 国际版“我的”页面
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Bilibili/Bilibili_lite.js, requires-body = true, tag = 精简Blued动态页面
+
+[MITM]
+hostname = app.bilibili.com
