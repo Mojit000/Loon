@@ -41,8 +41,8 @@ if (url.includes("/incentive_api/home/education_data")) {
   }
 }
 if (url.includes("/incentive_api/home/subscribe_apps")) {
-  if (obj.data) {
-    obj.data = null
+  if (obj.data && obj.data.apps) {
+    obj.data.apps = null
   }
 }
 
