@@ -18,7 +18,7 @@ http-response ^https:\/\/gapi\.guanaitong\.com\/api\/v8\/home\/cms script-path =
 
 # 精简：我的
 http-response ^https:\/\/gapi\.guanaitong\.com\/api\/v4\/my\/center script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/Profile.js, requires-body = true, tag = 精简：我的
-http-response ^https:\/\/gapi\.guanaitong\.com\/api\/v1\/my\/mine_floating_entry_icon script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/Profile_v2.js, requires-body = true, tag = 精简：我的
+http-response ^https:\/\/gapi\.guanaitong\.com\/api\/v1\/my\/user_profile script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/Profile_v2.js, requires-body = true, tag = 精简：我的
 
 [MITM]
 hostname = gapi.guanaitong.com
