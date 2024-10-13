@@ -2,7 +2,7 @@
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
-const array = [
+const new_health_app = [
       {
         "sort": 3,
         "link_url": "https://openapi.guanaitong.com/inner/trustLogin?redirectUrl=https://xintan.guanaitong.com/user/gatauth",
@@ -27,8 +27,8 @@ const array = [
 
 if (url.includes("/give-health-api/home")) {
   if (obj.data) {
-    // 精简“健康馆”
-    obj.data.health_app = obj.data.health_app.concat(array)
+    // 精简职点标签“健康馆”健康商城
+    obj.data.health_app = obj.data.health_app.concat(new_health_app)
     obj.data.health_app = obj.data.health_app.filter(item => item.title !== "每日一答");
     obj.data.goods = null
     obj.data.psy_health = null
