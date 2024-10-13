@@ -11,7 +11,7 @@ const array = [
         "title": "心理测评",
         "type": null,
         "img_url": "https://img1.guanaitong.com/grus-gfs/product/giveapp-mgr/by-days/2024-04-07/dc3c2479daaa72289d8e546a0b737556.png",
-        "desc": "科学分析，助你了解自我"
+        "desc": null
       },
       {
         "sort": 6,
@@ -21,14 +21,14 @@ const array = [
         "title": "心理课堂",
         "type": null,
         "img_url": "https://img1.guanaitong.com/grus-gfs/product/giveapp-mgr/by-days/2024-04-07/49b12b7b2203bde9c25bfd11d65079f1.png",
-        "desc": "在线课程，关爱心理健康"
+        "desc": null
       }
     ]
 
 if (url.includes("/give-health-api/home")) {
   if (obj.data) {
     // 精简“健康馆”
-    obj.data.health_app.appeng(array)
+    obj.data.health_app = obj.data.health_app.concat(array)
     obj.data.goods = null
     obj.data.psy_health = null
   }
