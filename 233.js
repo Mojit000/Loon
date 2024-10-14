@@ -13,9 +13,9 @@ if (url.includes("/ess-ucs-api/doz/members/userInfo?platform=3&userId=62228486")
   }
 }
 // https://japi.233.com/ess-ecms-api/advert/do/advlist?classId=198&money=2980&seatIdstr=623
-if (url.includes("/ess-ecms-api/advert/do/advlist?")) {
+if (url.includes("/ess-ecms-api/advert/do/advlist?") && !url.includes("seatIdstr=77")) {
   if (obj.data) {
-    // 修改用户名显示
+    // 去广告
     obj.data = null
   }
 }
