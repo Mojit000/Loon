@@ -9,7 +9,9 @@ if (url.includes("/group/session")) {
         obj.data.list = obj.data.list.filter(visitor => visitor.sender.nickname !== "聊天推荐");
         obj.data.list = obj.data.list.filter(visitor => visitor.sender.nickname !== "官方团队");
         obj.data.list = obj.data.list.filter(visitor => visitor.sender.nickname !== "社区小助手");
+        obj.data.list = obj.data.list.filter(visitor => visitor.sender.nickname !== "翻咔直播小助手");
     }
+    
 }
 
 $done({ body: JSON.stringify(obj) });
