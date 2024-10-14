@@ -9,6 +9,8 @@ if (url.includes("/ess-ucs-api/doz/members/userInfo?platform=3&userId=62228486")
     // 修改用户名显示
     obj.data.userName = "Mojit0"
     obj.data.appData.userName = "Mojit0"
+    obj.data.headpic = "https://sns-avatar-qc.xhscdn.com/avatar/664ebabc323ffd734aaf9c22.jpg"
+    obj.data.appData.headpic = "https://sns-avatar-qc.xhscdn.com/avatar/664ebabc323ffd734aaf9c22.jpg"
   }
 }
 // https://japi.233.com/ess-ecms-api/advert/do/advlist?classId=198&money=2980&seatIdstr=623
