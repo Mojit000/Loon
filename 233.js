@@ -16,6 +16,8 @@ if (url.includes("/ess-ucs-api/doz/members/userInfo?platform=3&userId=62228486")
 if (url.includes("/ess-ecms-api/advert/do/advlist?") && !url.includes("seatIdstr=77")) {
   if (obj.data) {
     // 去广告
+    obj.status = false
+    obj.code = 404
     obj.data = null
   }
 }
