@@ -4,7 +4,6 @@ if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
 // https://japi.233.com/ess-ucs-api/doz/members/userInfo?platform=3&userId=62228486
-
 if (url.includes("/ess-ucs-api/doz/members/userInfo?platform=3&userId=62228486")) {
   if (obj.data) {
     // 修改用户名显示
@@ -21,6 +20,12 @@ if (url.includes("/ess-ecms-api/advert/do/advlist?") && !url.includes("seatIdstr
     obj.data = null
   }
 }
-
+// https://japi.233.com/ess-ecms-api/newsInfo/do/homepage-hot?domain=aq
+if (url.includes("/ss-ecms-api/newsInfo/do/homepage-hot?domain=aq")) {
+  if (obj.data) {
+    // 删除考试热点
+    obj.data = null
+  }
+}
 $done({ body: JSON.stringify(obj)
 });
