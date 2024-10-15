@@ -19,12 +19,12 @@ if (url.includes("/HomePage?deviceId")) {
   }
 }
 
-//https://api.benlai.com/v5/AppSupport/BusinessConfig?
-if (url.includes("/v5/AppSupport/BusinessConfig?")) {
+if (url.includes("/v5/AppSupport/BusinessConfig?areaId")) {
   if (obj.data && obj.data.bottom) {
     // 精简首页：Tab
     obj.data.keyWorld = ""
-    obj.data.bottom.buttons = obj.data.bottom.buttons.filter(item => item.siteNo !== 3)
+    obj.data.bottom.buttons = obj.data.bottom.buttons.filter(button => button.name !== "C位已登录")
   }
 }
+
 $done({ body: JSON.stringify(obj) });
