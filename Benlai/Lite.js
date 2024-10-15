@@ -18,7 +18,7 @@ if (url.includes("/HomePage?deviceId")) {
     obj.data = obj.data.filter(item => item.name !== "DominateScreenV2")
     obj.data = obj.data.filter(item => item.name !== "Buyer")
     obj.data = obj.data.filter(item => item.name !== "Preferential")
-    // obj.data = obj.data.filter(item => item.title !== "活动区域")
+    obj.data = obj.data.filter(item => item.name !== "Activity")
     
   }
 }
