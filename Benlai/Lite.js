@@ -15,9 +15,10 @@ if (url.includes("/HomePage/Category")) {
 if (url.includes("/HomePage?deviceId")) {
   if (obj.data) {
     // 精简首页：轮播
-    obj.data = obj.data.filter(item => item.title !== "霸屏区域2.0")
-    obj.data = obj.data.filter(item => item.title !== "买手推荐")
-    obj.data = obj.data.filter(item => item.title !== "活动区域")
+    // obj.data = obj.data.filter(item => item.title !== "霸屏区域2.0")
+    obj.data = obj.data.filter(item => item.name !== "Buyer")
+    obj.data = obj.data.filter(item => item.name !== "Preferential")
+    // obj.data = obj.data.filter(item => item.title !== "活动区域")
     
   }
 }
