@@ -14,8 +14,8 @@ if (url.includes("/HomePage/Category")) {
 
 if (url.includes("/HomePage?deviceId")) {
   if (obj.data) {
-    // 精简首页：轮播
-    // obj.data = obj.data.filter(item => item.title !== "霸屏区域2.0")
+    // 精简首页：顶部轮播，活动专区，优惠专区
+    obj.data = obj.data.filter(item => item.name !== "DominateScreenV2")
     obj.data = obj.data.filter(item => item.name !== "Buyer")
     obj.data = obj.data.filter(item => item.name !== "Preferential")
     // obj.data = obj.data.filter(item => item.title !== "活动区域")
