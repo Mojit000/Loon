@@ -23,7 +23,7 @@ if (url.includes("/HomePage?deviceId")) {
   }
 }
 
-if (url.includes("/v5/AppSupport/BusinessConfig?areaId")) {
+if (url.includes("/AppSupport/BusinessConfig?areaId")) {
   if (obj.data && obj.data.bottom) {
     // 精简首页：Tab
     obj.data.keyWorld = ""
