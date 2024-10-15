@@ -27,9 +27,8 @@ if (url.includes("/AppSupport/BusinessConfig?areaId")) {
   if (obj.data && obj.data.bottom) {
     // 精简首页：Tab
     obj.data.keyWorld = ""
-    obj.data.bottom.buttons = obj.data.bottom.buttons.filter(button => button.name !== "C位已登录")
-    obj.data.bottom.buttons[2].siteNo = 3
-    obj.data.bottom.buttons[3].siteNo = 4
+    // obj.data.bottom.buttons = obj.data.bottom.buttons.filter(button => button.name !== "C位已登录")
+    obj.data.bottom.buttons[2].linkValue = "https://m.benlai.com/userHome/goPaynew"
   }
 }
 
