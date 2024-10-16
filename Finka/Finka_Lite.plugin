@@ -10,6 +10,9 @@
 
 
 [Rewrite]
+# 直播弹窗
+^https:\/\/api\.finka\.cn\/count\/v3\? reject-dict
+^https:\/\/api\.finka\.cn\/live\/follow\/guide\? reject-dict
 # 私信：新的匹配
 ^https:\/\/api\.finka\.cn\/inbox\/match\/newest\? reject-dict
 
