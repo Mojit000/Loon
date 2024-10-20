@@ -49,7 +49,7 @@ if (url.includes("interface/sdk/sdkad.php")) {
     // 我的页面 尊享专属
     if (e?.data?.cards) {
       e.data.cards.forEach((card) => {
-        card.items = card.items.filter((item) => !["personal_vip", "personal_wallpaper", "personal_feedback", "personal_accessrecord"].includes(item.type));
+        card.items = card.items.filter((item) => !["personal_vip", "personal_wallpaper", "personal_feedback", "personal_accessrecord", "personal_topic"].includes(item.type));
 	card.items.forEach(item => {
 	    if (item.type === "ic_profile_wallpaper") {
 		item.schema = "weibointernational://personal_icon?intl_tab=1";
