@@ -12,6 +12,8 @@ if (url.includes("/group/session")) {
         // obj.data.list = obj.data.list.filter(visitor => visitor.sender.nickname !== "官方团队");
         // obj.data.list = obj.data.list.filter(visitor => visitor.sender.nickname !== "社区小助手");
         // obj.data.list = obj.data.list.filter(visitor => visitor.sender.nickname !== "翻咔直播小助手");
+        
+        // 定义需要过滤掉的昵称列表
         const filteredNicknames = [
             "附近的人", 
             "翻咔直播小助手", 
