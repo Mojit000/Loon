@@ -31,6 +31,15 @@ if (url.includes("interface/sdk/sdkad.php")) {
     if (e.data?.order) {
       e.data.order = ["search_topic"];
     }
+  } else if (url.includes("portal.php?a=trends")) {
+    // 趋势页
+    if (obj.data) {
+			 obj.data.banner = null
+			 obj.data.native_content = null
+			 obj.data.profile_accessrecord = null
+			 obj.data.discover.shift()
+			 obj.data.discover.pop()
+    }
   } else if (url.includes("php?a=search_topic")) {
     // 热搜置顶
     if (e.data?.length && e.data[0].type === "searchtop") {
@@ -41,7 +50,7 @@ if (url.includes("interface/sdk/sdkad.php")) {
     if (e?.data?.cards) {
       e.data.cards.forEach((card) => {
         card.items = card.items.filter(
-          (item) => !["personal_vip", "personal_wallpaper", "personal_feedback"].includes(item.type)
+          (item) => !["personal_vip", "personal_wallpaper", "personal_feedback", "personal_accessrecord"].includes(item.type)
         );})}
   } else if (url.includes("a=get_searching_info")) {
     e = {
