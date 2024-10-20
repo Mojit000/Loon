@@ -33,12 +33,12 @@ if (url.includes("interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("portal.php?a=trends")) {
     // 趋势页
-    if (obj.data) {
-			 obj.data.banner = null
-			 obj.data.native_content = null
-			 obj.data.profile_accessrecord = null
-			 obj.data.discover.shift()
-			 obj.data.discover.pop()
+    if (e.data) {
+        e.data.banner = null
+        e.data.native_content = null
+        e.data.profile_accessrecord = null
+	e.data.discover.shift()
+	e.data.discover.pop()
     }
   } else if (url.includes("php?a=search_topic")) {
     // 热搜置顶
