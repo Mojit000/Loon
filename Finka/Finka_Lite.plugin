@@ -35,6 +35,9 @@
 ^https:\/\/api\.finka\.cn\/audio-live\/list reject-dict
 
 [Script]
+# 精简主页
+http-response ^https:\/\/api\.finka\.cn\/constants\/ios\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Finka.js, requires-body = true, tag = 精简主页
+
 # 移除直播：推荐、语音房标签
 http-response ^https:\/\/api\.finka\.cn\/recommend\/live\/tabConfig script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/LiveShow.js, requires-body = true, tag = 移除推荐、语音房标签
 
