@@ -6,7 +6,7 @@ if (url.includes("/constants/ios")) {
     if (obj.data && obj.data.splashAdNew && obj.data.activityView && obj.data.matchWebTabInfo) {
         obj.data.splashAdNew = null;
         obj.data.activityView = null;
-        obj.data.matchWebTabInfo = null
+        obj.data.matchWebTabInfo = null;
     }
 }
 
