@@ -15,7 +15,7 @@ if (url.includes("/live/tabConfig")) {
 
 if (url.includes("/recommend/live")) {
     if (obj.data && obj.data.moduleList) {
-        obj.data.moduleList.adList = null;
+        obj.data.moduleList = obj.data.moduleList.filter(module => module.h == "热门");;
     }
 }
 
