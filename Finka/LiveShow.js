@@ -14,7 +14,7 @@ if (url.includes("/live/tabConfig")) {
 }
 
 if (url.includes("/recommend/live")) {
-    if (obj.data && ) {
+    if (obj.data) {
         if(obj.data.moduleList) obj.data.moduleList = obj.data.moduleList.filter(module => !module.hasOwnProperty("adList"));
         if(obj.data.list) {
             obj.data.list.forEach(user => {
