@@ -14,10 +14,15 @@ if (url.includes("/live/tabConfig")) {
 }
 
 if (url.includes("/recommend/live")) {
-    if (obj.data && obj.data.moduleList) {
-        obj.data.moduleList = obj.data.moduleList.filter(module => !module.hasOwnProperty("adList"));
+    if (obj.data && ) {
+        if(obj.data.moduleList) obj.data.moduleList = obj.data.moduleList.filter(module => !module.hasOwnProperty("adList"));
+        if(obj.data.list) {
+            obj.data.list.forEach(user => {
+                user.decoV1 = null;
+                user.deco = null;
+            });
+        }
     }
-}
 
 if (url.includes("/live/view/v3")) {
     if (obj.data) {
