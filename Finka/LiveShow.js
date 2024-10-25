@@ -7,20 +7,20 @@ if (url.includes("/live/tabConfig")) {
     if (obj.data && obj.data.tabList) {
         // 过滤掉tab为"语音房"的tab
         obj.data.tabList = obj.data.tabList.filter(info => info.tab !== "语音房");
-        obj.data.tabList = obj.data.tabList.filter(info => info.tab !== "关注");
         // 修改default值
         if (obj.data.tabList[1]) obj.data.tabList[1].default = true;
+        if (obj.data.tabList[2) obj.data.tabList[2].default = false;
     }
 }
 
 if (url.includes("/recommend/live")) {
-    if (obj.data && obj.data.moduleList.adList) {
+    if (obj.data && obj.data.moduleList) {
         obj.data.moduleList.adList = null;
     }
 }
 
 if (url.includes("/live/view/v3")) {
-    if (obj.data && obj.data.activity2 && obj.data.activities) {
+    if (obj.data) {
         obj.data.activity2  = null;
         obj.data.activities  = null;
     }
