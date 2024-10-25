@@ -5,11 +5,11 @@ let obj = JSON.parse($response.body);
 
 if (url.includes("/live/tabConfig")) {
     if (obj.data && obj.data.tabList) {
-        // 过滤掉tab为"语音房"的tab
-        obj.data.tabList = obj.data.tabList.filter(info => info.tab !== "语音房");
+        // 保留“热门”
+        obj.data.tabList = obj.data.tabList.filter(info => info.tab == "热门");
         // 修改default值
-        if (obj.data.tabList[1]) obj.data.tabList[1].default = true;
-        if (obj.data.tabList[2) obj.data.tabList[2].default = false;
+        // if (obj.data.tabList[1]) obj.data.tabList[1].default = true;
+        // if (obj.data.tabList[2) obj.data.tabList[2].default = false;
     }
 }
 
