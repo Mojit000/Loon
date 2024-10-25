@@ -1,5 +1,5 @@
 #!name = 翻咔社区
-#!desc = 移除直播：推荐、语音房标签；私信：官方助手信息标签；动态：彩虹A+会员推荐、特别企划；资料页面精简
+#!desc = 保留直播热门标签；移除私信官方助手信息；移除动态页面内的彩虹A+会员推荐、动态推广，官方企划；精简资料页面；精简主页，移除定制Tab
 #!openUrl = https://apps.apple.com/app/id898533490
 #!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Finka.png
 #!tag = 页面精简
@@ -35,8 +35,8 @@
 ^https:\/\/api\.finka\.cn\/audio-live\/list reject-dict
 
 [Script]
-# 精简主页
-http-response ^https:\/\/api\.finka\.cn\/constants\/ios\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Finka.js, requires-body = true, tag = 精简主页
+# 精简主页，移除定制Tab
+http-response ^https:\/\/api\.finka\.cn\/constants\/ios\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Finka.js, requires-body = true, tag = 精简主页，移除定制Tab
 
 # 移除直播：推荐、语音房标签
 http-response ^https:\/\/api\.finka\.cn\/recommend\/live\/tabConfig script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/LiveShow.js, requires-body = true, tag = 移除推荐、语音房标签
