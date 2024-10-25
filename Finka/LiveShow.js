@@ -23,6 +23,7 @@ if (url.includes("/recommend/live")) {
             });
         }
     }
+}
 
 if (url.includes("/live/view/v3")) {
     if (obj.data) {
