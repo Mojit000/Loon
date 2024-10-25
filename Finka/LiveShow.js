@@ -15,8 +15,14 @@ if (url.includes("/live/tabConfig")) {
 
 if (url.includes("/recommend/live")) {
     if (obj.data && obj.data.moduleList.adList) {
-        // 过滤掉tab为"语音房"的tab
         obj.data.moduleList.adList = null;
+    }
+}
+
+if (url.includes("/live/view/v3")) {
+    if (obj.data && obj.data.activity2 && obj.data.activities) {
+        obj.data.activity2  = null;
+        obj.data.activities  = null;
     }
 }
 
