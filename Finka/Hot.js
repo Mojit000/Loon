@@ -7,7 +7,8 @@ if (url.includes("/post/rcmd/list")) {
     if (obj.data && obj.data.list && obj.data.tagList) {
         // 过滤热门：官方推荐，顶部Tab
         obj.data.list = obj.data.list.filter(item => !(item.hasOwnProperty("tabList")));
-        obj.data.tagList = null
+        obj.data.tagList = null;
+        obj.data.adList = null;
     }
 }
 
