@@ -43,8 +43,6 @@ http-response ^https:\/\/api\.finka\.cn\/recommend\/live\/tabConfig script-path 
 http-response ^https:\/\/api\.finka\.cn\/recommend\/live script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/LiveShow.js, requires-body = true, tag = 移除热门Banner、头像右上角Deco
 http-response ^https:\/\/api\.finka\.cn\/live\/view\/v3 script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/LiveShow.js, requires-body = true, tag = 移除热门Banner
 
-hostname = api.finka.cn
-
 # 移除私信：官方助手信息标签
 http-response ^https:\/\/api\.finka\.cn\/group\/session\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Chat.js, requires-body = true, tag = 移除私信：官方助手信息标签
 
