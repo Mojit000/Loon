@@ -10,8 +10,8 @@ if (url.includes("/feed/v5")) {
         obj.data.list = obj.data.list.filter(item => item.type !== "PostSpecialExposure");
         obj.data.list = obj.data.list.filter(item => item.label !== "特别企划");
         obj.data.list = obj.data.list.filter(item => item.postId !== "rl-nrAlJyA5PrCYDWVbkEQ");
-        // obj.data.list = obj.data.list.filter(item => !(item.postId.include("card:")));
-        obj.data.list = obj.data.list.filter(item => item.postId !== "card:c98M_IKDhViVV58ZthqinA");
+        obj.data.list = obj.data.list.filter(item => !(item.postId.includes("card:")));
+        // obj.data.list = obj.data.list.filter(item => item.postId !== "card:c98M_IKDhViVV58ZthqinA");
     }
 }
 
