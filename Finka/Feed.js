@@ -19,6 +19,7 @@ if (url.includes("/feed/v5")) {
                 obj.data.list.splice(index, 1);
             }
             if (item.type === "PostSpecialExposure") {
+                item.list = null;
                 obj.data.list.splice(index, 1);
             }
             if (item.type === "ShowCase") {
