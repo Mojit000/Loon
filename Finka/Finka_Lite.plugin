@@ -49,7 +49,7 @@ hostname = api.finka.cn
 http-response ^https:\/\/api\.finka\.cn\/group\/session\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Chat.js, requires-body = true, tag = 移除私信：官方助手信息标签
 
 # 移除动态：彩虹A+会员推荐、官方推介
-http-response ^https:\/\/api\.finka\.cn\/feed\/v5\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Feed.js, requires-body = true, tag = 移除动态：彩虹A+会员推荐、官方推介
+http-response ^https:\/\/api\.finka\.cn\/feed\/v5\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Finka.js, requires-body = true, tag = 移除动态：彩虹A+会员推荐、官方推介
 
 # 移除热门：顶部Tab、官方推介
 http-response ^https:\/\/api\.finka\.cn\/post\/rcmd\/list\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Hot.js, requires-body = true, tag = 移除热门：顶部Tab、官方推介
