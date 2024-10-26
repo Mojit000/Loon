@@ -24,7 +24,7 @@ if (url.includes("/feed/v5")) {
             if (item.type === "ShowCase") {
                 obj.data.list.splice(index, 1);
             }
-            if (item.type === "ShowCase") {
+            if (item.boosting == true) {
                 obj.data.list.splice(index, 1);
             }
             if (item.label === "特别企划") {
