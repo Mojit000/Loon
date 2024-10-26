@@ -43,14 +43,14 @@ http-response ^https:\/\/api\.finka\.cn\/recommend\/live\/tabConfig script-path 
 http-response ^https:\/\/api\.finka\.cn\/recommend\/live script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/LiveShow.js, requires-body = true, tag = 移除热门Banner、头像右上角Deco
 http-response ^https:\/\/api\.finka\.cn\/live\/view\/v3 script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/LiveShow.js, requires-body = true, tag = 移除热门Banner
 
-# 移除私信：官方助手信息标签
-# http-response ^https:\/\/api\.finka\.cn\/group\/session\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Chat.js, requires-body = true, tag = 移除私信：官方助手信息标签
+# 移除私信页面：官方助手信息标签
+# http-response ^https:\/\/api\.finka\.cn\/group\/session\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Chat.js, requires-body = true, tag = 移除私信页面：官方助手信息标签
 
-# 移除动态：彩虹A+会员推荐、官方推介
-http-response ^https:\/\/api\.finka\.cn\/feed\/v5\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Feed.js, requires-body = true, tag = 移除动态：彩虹A+会员推荐、官方推介
+# 移除动态关注页面：彩虹A+会员推荐、官方推介
+http-response ^https:\/\/api\.finka\.cn\/feed\/v5\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Feed.js, requires-body = true, tag = 移除动态关注页面：彩虹A+会员推荐、官方推介
 
-# 移除热门：顶部Tab、官方推介
-http-response ^https:\/\/api\.finka\.cn\/post\/rcmd\/list\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Hot.js, requires-body = true, tag = 移除热门：顶部Tab、官方推介
+# 移除动态热门页面：顶部Tab、官方推介
+http-response ^https:\/\/api\.finka\.cn\/post\/rcmd\/list\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Hot.js, requires-body = true, tag = 移除动态热门页面：顶部Tab、官方推介
 
 # 精简资料页面
 http-response ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Profile.js, requires-body = true, tag = 精简资料页面
