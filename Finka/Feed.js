@@ -8,6 +8,7 @@ if (url.includes("/feed/v5")) {
         // 过滤掉动态为彩虹A+会员推荐、官方企划、动态推广
         obj.data.list = obj.data.list.filter(item => !(item.hasOwnProperty("postBoostInfo")));
         obj.data.list = obj.data.list.filter(item => item.type !== "PostSpecialExposure");
+        obj.data.list = obj.data.list.filter(item => item.type !== "ShowCase");
         obj.data.list = obj.data.list.filter(item => item.label !== "特别企划");
         obj.data.list = obj.data.list.filter(item => item.postId !== "rl-nrAlJyA5PrCYDWVbkEQ");
         obj.data.list = obj.data.list.filter(item => !item.postId.startsWith("card:"));
