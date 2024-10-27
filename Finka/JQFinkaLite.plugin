@@ -1,1 +1,29 @@
+#!name = 翻咔社区
+#!desc = 保留直播热门标签；移除私信顶部匹配Banner；移除动态页面内的彩虹A+会员推荐、动态推广，官方企划；精简动态页面内的热门；精简资料页面；精简主页，移除定制Tab
+#!openUrl = https://apps.apple.com/app/id898533490
+#!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Finka.png
+#!tag = 页面精简
+#!author = Mojit000[https://github.com/Mojit000]
+#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
+#!loon_version = 3.2.4(768)
 
+[Rule]
+
+[Rewrite]
+^https:\/\/api\.finka\.cn\/inbox\/match\/newest\? reject-dict
+^https:\/\/api\.finka\.cn\/ad\/? reject-dict
+^https:\/\/api\.finka\.cn\/audio-live\/quick-access reject-dict
+^https:\/\/api\.finka\.cn\/audio-live\/list reject-dict
+^https:\/\/api\.finka\.cn\/recommend\/other response-body-json-del data.liveList
+^https:\/\/api\.finka\.cn\/recommend\/live\/tabConfig response-body-json-jq '.data.tabList |= map(select(.type == "HOT"))'
+^https:\/\/api\.finka\.cn\/constants\/ios\? response-body-json-jq 'del(.data.splashAdNew, .data.activityView, .data.matchWebTabInfo)'
+^https:\/\/api\.finka\.cn\/live\/view\/v3 response-body-json-jq 'del(.data.activities, .data.activity2)'
+^https:\/\/api\.finka\.cn\/recommend\/live response-body-json-jq '.data.moduleList |= map(select(.adList | not))' 'del(.data.list[].decoV1, .data.list[].deco)'
+^https:\/\/api\.finka\.cn\/post\/rcmd\/list\? response-body-json-jq 'del(.data.adList, .data.tagList)' '.data.list |= map(select(.tabList | not))'
+^https:\/\/api\.finka\.cn\/constants\/ios\? response-body-json-jq 'del(.data.splashAdNew, .data.activityView, .data.matchWebTabInfo)'
+^https:\/\/api\.finka\.cn\/vas\/tool-box\/get\? response-body-json-jq '.data.list |= map(select(.trackName != "NEW_NEARBY" and .trackName != "MEET_REMINDER"))'
+^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq 'del(.data.featuredServicesList, .data.adMoreUrl, .data.ad, .data.valueEquityTopList, .data.profilePasterAd, .data.outFunctionList)'
+^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.type != "PostSpecialExposure" and (.boosting | not)))'
+
+[MITM]
+hostname = api.finka.cn
