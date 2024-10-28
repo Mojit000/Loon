@@ -23,7 +23,7 @@
 ^https:\/\/api\.finka\.cn\/constants\/ios\? response-body-json-jq 'del(.data.splashAdNew, .data.activityView, .data.matchWebTabInfo)'
 ^https:\/\/api\.finka\.cn\/vas\/tool-box\/get\? response-body-json-jq '.data.list |= map(select(.trackName != "NEW_NEARBY" and .trackName != "MEET_REMINDER"))'
 ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq 'del(.data.featuredServicesList, .data.adMoreUrl, .data.ad, .data.valueEquityTopList, .data.profilePasterAd, .data.outFunctionList)'
-^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.type != "PostSpecialExposure" and (.boosting | not) and (.postId | startswith("card:") | not)))'
+^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.type != "PostSpecialExposure" and (.boosting | not) and .type != "ShowCase"))'
 
 [MITM]
 hostname = api.finka.cn
