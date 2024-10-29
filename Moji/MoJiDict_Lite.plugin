@@ -9,8 +9,10 @@
 [Rule]
 
 [Rewrite]
-# 移除首页推广
+# 移除MOJiDict首页推广
 ^https:\/\/api\.mojidict\.com\/parse\/functions\/resrcPos-fetchPublished response-body-json-del result
+# 移除MOJiTest首页推广
+^https:\/\/api\.mojidict\.com\/app\/mojitest\/parse\/functions\/union-api response-body-json-del result.results.resrcPos-fetchPublished.result.data
 [Script]
 
 [MITM]
