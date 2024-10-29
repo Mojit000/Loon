@@ -9,8 +9,6 @@
 [Rule]
 
 [Rewrite]
-# 精简：小课堂
-^https:\/\/api\.mojidict\.com\/parse\/functions\/resrcPos-fetchPublished reject-dict
 # 移除首页推广
 ^https:\/\/api\.mojidict\.com\/parse\/functions\/resrcPos-fetchPublished response-body-json-del result
 [Script]
