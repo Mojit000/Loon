@@ -25,7 +25,7 @@
 ^https:\/\/api\.finka\.cn\/vas\/tool-box\/get\? response-body-json-jq '.data.list |= map(select(.trackName != "NEW_NEARBY" and .trackName != "MEET_REMINDER"))'
 # 精简资料页面
 ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq 'del(.data.featuredServicesList, .data.adMoreUrl, .data.ad, .data.valueEquityTopList, .data.profilePasterAd, .data.outFunctionList)'
-^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq 'del(.data.innerFunction[3])'
+^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq 'del(.data.innerFunction[0] |= .[0:-1])'
 # 精简动态页面
 ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.type != "PostSpecialExposure" and (.boosting | not) and .type != "ShowCase"))'
 ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label != "话题活动"))'
