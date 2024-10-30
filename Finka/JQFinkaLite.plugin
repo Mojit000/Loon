@@ -10,20 +10,25 @@
 [Rule]
 
 [Rewrite]
+# 去广告
 ^https:\/\/api\.finka\.cn\/inbox\/match\/newest\? reject-dict
 ^https:\/\/api\.finka\.cn\/ad\/? reject-dict
 ^https:\/\/api\.finka\.cn\/audio-live\/quick-access reject-dict
 ^https:\/\/api\.finka\.cn\/audio-live\/list reject-dict
 ^https:\/\/api\.finka\.cn\/recommend\/other response-body-json-del data.liveList
-^https:\/\/api\.finka\.cn\/recommend\/live\/tabConfig response-body-json-jq '.data.tabList |= map(select(.type == "HOT"))'
-^https:\/\/api\.finka\.cn\/constants\/ios\? response-body-json-jq 'del(.data.splashAdNew, .data.activityView, .data.matchWebTabInfo)'
 ^https:\/\/api\.finka\.cn\/live\/view\/v3 response-body-json-jq 'del(.data.activities, .data.activity2)'
+# 精简直播页面
 ^https:\/\/api\.finka\.cn\/recommend\/live response-body-json-jq '.data.moduleList |= map(select(.adList | not))' 'del(.data.list[].decoV1, .data.list[].deco)'
-^https:\/\/api\.finka\.cn\/post\/rcmd\/list\? response-body-json-jq 'del(.data.adList, .data.tagList)' '.data.list |= map(select(.tabList | not))'
+^https:\/\/api\.finka\.cn\/recommend\/live\/tabConfig response-body-json-jq '.data.tabList |= map(select(.type == "HOT"))'
+# 精简翻咔页面
 ^https:\/\/api\.finka\.cn\/constants\/ios\? response-body-json-jq 'del(.data.splashAdNew, .data.activityView, .data.matchWebTabInfo)'
 ^https:\/\/api\.finka\.cn\/vas\/tool-box\/get\? response-body-json-jq '.data.list |= map(select(.trackName != "NEW_NEARBY" and .trackName != "MEET_REMINDER"))'
+# 精简资料页面
 ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq 'del(.data.featuredServicesList, .data.adMoreUrl, .data.ad, .data.valueEquityTopList, .data.profilePasterAd, .data.outFunctionList)'
+^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq 'del(.data.innerFunction[3])'
+# 精简动态页面
 ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.type != "PostSpecialExposure" and (.boosting | not) and .type != "ShowCase"))'
 ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label != "话题活动"))'
+^https:\/\/api\.finka\.cn\/post\/rcmd\/list\? response-body-json-jq 'del(.data.adList, .data.tagList)' '.data.list |= map(select(.tabList | not))'
 [MITM]
 hostname = api.finka.cn
