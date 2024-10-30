@@ -10,8 +10,9 @@
 [Rule]
 
 [Rewrite]
-# Blued极速版去除提示下载Blued的弹窗
+# Blued极速版：移除首页推荐直播
 ^https:\/\/argo\.blued\.cn\/users\/recommend response-body-json-del data
+# Blued极速版：去除提示下载Blued的弹窗
 ^https:\/\/argo\.blued\.cn\/blued\/config response-body-json-del data.social_image data.social_top_image
 # 去广告
 ^https:\/\/api\.finka\.cn\/inbox\/match\/newest\? reject-dict
