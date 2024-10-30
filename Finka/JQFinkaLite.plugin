@@ -10,6 +10,9 @@
 [Rule]
 
 [Rewrite]
+# Blued极速版去除提示下载Blued的弹窗
+^https:\/\/argo\.blued\.cn\/users\/recommend response-body-json-del data
+^https:\/\/argo\.blued\.cn\/blued\/config response-body-json-del data.social_image data.social_top_image
 # 去广告
 ^https:\/\/api\.finka\.cn\/inbox\/match\/newest\? reject-dict
 ^https:\/\/api\.finka\.cn\/ad\/? reject-dict
@@ -31,4 +34,4 @@
 ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label != "话题活动"))'
 ^https:\/\/api\.finka\.cn\/post\/rcmd\/list\? response-body-json-jq 'del(.data.adList, .data.tagList)' '.data.list |= map(select(.tabList | not))'
 [MITM]
-hostname = api.finka.cn
+hostname = api.finka.cn, argo.blued.cn
