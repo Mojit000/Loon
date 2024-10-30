@@ -1,5 +1,5 @@
 #!name = Bilibili国际版
-#!desc = 精简 Bilibili 国际版“我的”页面
+#!desc = 修改 Bilibili 国际版“我的”页面样式，删除“我的NFT”
 #!openUrl = https://apps.apple.com/app/id1517062289
 #!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Bilibili/icon.png
 #!tag = 页面精简
@@ -9,10 +9,12 @@
 [Rule]
 
 [Rewrite]
+^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? response-body-json-jq '.data.sections_v2[1].style = 1'
+^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? response-body-json-del data.sections_v2[1].title data.sections_v2[1].items[4]
 
 [Script]
 # 精简 Bilibili 国际版“我的”页面
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Bilibili/Profile.js, requires-body = true, tag = 精简Bilibili设置页面
+# http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? script-path = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Bilibili/Profile.js, requires-body = true, tag = 精简Bilibili设置页面
 
 [MITM]
 hostname = app.bilibili.com
