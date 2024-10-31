@@ -15,7 +15,7 @@
 # Blued极速版：去除提示下载Blued的弹窗
 ^https:\/\/argo\.blued\.cn\/blued\/config response-body-json-del data.social_image data.social_top_image
 # Blued极速版：保留28-40岁，且体重在55-75kg的动态页面
-^https:\/\/argo\.blued\.cn\/ticktocks\/users\/\d+\?exclude_id=&filter=city response-body-json-jq '.data |= map(select(.age >= 28 and .age <= 40 and .weight >= 55 and .weight <= 75))'
+^https:\/\/argo\.blued\.cn\/ticktocks\/users\/\d+\?exclude_id=&filter=city response-body-json-jq '.data |= map(select(.age >= 27 and .age <= 40 and .weight >= 55 and .weight <= 75))'
 # 去广告
 ^https:\/\/api\.finka\.cn\/inbox\/match\/newest\? reject-dict
 ^https:\/\/api\.finka\.cn\/ad\/? reject-dict
