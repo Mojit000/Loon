@@ -33,7 +33,7 @@
 ^https:\/\/api\.finka\.cn\/vas\/tool-box\/get\? response-body-json-jq '.data.list |= map(select(.trackName != "NEW_NEARBY" and .trackName != "MEET_REMINDER"))'
 # 保留27-40岁，且BMI在18.5-24🌈的动态页面（有BUG）
 # ^https:\/\/api\.finka\.cn\/user\/recommend\?_t=\d+&multiInfo=1 response-body-json-jq '.data.list |= map(select(.user.age >= 27 and .user.age <= 40 and ((.user.weight / ((.user.height / 100) * (.user.height / 100))) >= 18.5 and (.user.weight / ((.user.height / 100) * (.user.height / 100))) <= 24)))'
-^https:\/\/api\.finka\.cn\/user\/recommend\?_t=\d+&multiInfo=1 response-body-json-jq 'del(.data.list)'
+^https:\/\/api\.finka\.cn\/user\/recommend\?_t=\d+&multiInfo=1 response-body-json-jq '.data.list |= map(select(.age >= 27 and .age <= 40))'
 # 精简资料页面
 ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq 'del(.data.featuredServicesList, .data.adMoreUrl, .data.ad, .data.valueEquityTopList, .data.profilePasterAd, .data.outFunctionList)'
 ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq '.data.innerFunction[0] |= .[0:-1]'
