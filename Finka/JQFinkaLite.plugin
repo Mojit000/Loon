@@ -29,7 +29,7 @@
 ^https:\/\/api\.finka\.cn\/recommend\/live\/tabConfig response-body-json-jq '.data.tabList |= map(select(.type == "HOT"))'
 ^https:\/\/api\.finka\.cn\/recommend\/live response-body-json-jq '.data.moduleList |= map(select(.adList | not))' 'del(.data.list[].decoV1, .data.list[].deco)'
 # 精简翻咔页面
-^https:\/\/api\.finka\.cn\/constants\/ios\? response-body-json-jq 'del(.data.splashAdNew, .data.activityView, .data.matchWebTabInfo)'
+^https:\/\/api\.finka\.cn\/constants\/ios\? response-body-json-jq 'del(.data.splashAdNew, .data.activityView, .data.matchWebTabInfo, .data.adFeedParam, .data.prefetchResources)'
 ^https:\/\/api\.finka\.cn\/vas\/tool-box\/get\? response-body-json-jq '.data.list |= map(select(.trackName != "NEW_NEARBY" and .trackName != "MEET_REMINDER"))'
 # 精简资料页面
 ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq 'del(.data.featuredServicesList, .data.adMoreUrl, .data.ad, .data.valueEquityTopList, .data.profilePasterAd, .data.outFunctionList)'
