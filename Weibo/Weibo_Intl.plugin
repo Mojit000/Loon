@@ -14,6 +14,8 @@
 # 热门视频、热推荐
 ^https?:\/\/api\.weibo\.cn\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) reject-dict
 ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=hot_search_users reject-dict
+# 趋势页精简
+^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trend? response-body-json-jq 'del(.data.banner,.data.native_content,.data.profile_accessrecord,.data.discover[0,-1])'
 
 [Script]
 # 趋势页、开屏广告、用户中心、热搜置顶、我的页面、尊享专属、信息流
