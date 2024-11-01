@@ -31,6 +31,7 @@
 # 精简翻咔页面
 ^https:\/\/api\.finka\.cn\/constants\/ios\? response-body-json-jq 'del(.data.splashAdNew, .data.activityView, .data.matchWebTabInfo, .data.adFeedParam, .data.prefetchResources)'
 ^https:\/\/api\.finka\.cn\/vas\/tool-box\/get\? response-body-json-jq '.data.list |= map(select(.trackName != "NEW_NEARBY" and .trackName != "MEET_REMINDER"))'
+^^https:\/\/api\.finka\.cn\/user\/recommend\?_t=\d+? response-body-json-jq '.data.list |= map(select(.user.age >= 27 and .user.age <= 40 and ((.user.weight / ((.user.height / 100) * (.user.height / 100))) >= 18.5 and (.user.weight / ((.user.height / 100) * (.user.height / 100))) <= 24)))'
 # 精简资料页面
 ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq 'del(.data.featuredServicesList, .data.adMoreUrl, .data.ad, .data.valueEquityTopList, .data.profilePasterAd, .data.outFunctionList)'
 ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq '.data.innerFunction[0] |= .[0:-1]'
@@ -40,3 +41,4 @@
 ^https:\/\/api\.finka\.cn\/post\/rcmd\/list\? response-body-json-jq 'del(.data.adList, .data.tagList)' '.data.list |= map(select(.tabList | not))'
 [MITM]
 hostname = api.finka.cn, argo.blued.cn
+
