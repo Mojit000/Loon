@@ -1,17 +1,17 @@
 #!name = 微博轻享版去广告
-#!desc = 过滤轻享国际版广告及去除各部分推广模块
+#!desc = 过滤微博轻享版广告，去除各部分推广模块，去除VIP相关链接
 #!openUrl = https://apps.apple.com/app/id1215210046
 #!author = Keywos[https://github.com/Keywos], kokoryh[https://github.com/kokoryh]
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.1(749)
+#!loon_version = 3.2.4(768)
 #!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weibo_intl.png
-#!date = 2023-09-07 23:18:14
+#!date = 2024-11-01
 
 [Rewrite]
-# 热门视频、热推荐
+# 热门视频、热门推荐
 ^https?:\/\/api\.weibo\.cn\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) reject-dict
 ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=hot_search_users reject-dict
 # 趋势页精简
