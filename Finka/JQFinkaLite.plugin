@@ -26,7 +26,7 @@
 ^https:\/\/api\.finka\.cn\/recommend\/other response-body-json-del data.liveList
 ^https:\/\/api\.finka\.cn\/live\/view\/v3 response-body-json-jq 'del(.data.activities, .data.activity2)'
 # 精简直播页面
-^https:\/\/api\.finka\.cn\/recommend\/live\/tabConfig response-body-json-jq '.data.tabList |= map(select(.type == "HOT"))'
+^https:\/\/api\.finka\.cn\/recommend\/live\/tabConfig response-body-json-jq '.data.tabList |= map(select(.type != "AUDIOLIVE"))'
 ^https:\/\/api\.finka\.cn\/recommend\/live response-body-json-jq '.data.moduleList |= map(select(.adList | not))' 'del(.data.list[].decoV1, .data.list[].deco)'
 # 精简翻咔页面
 ^https:\/\/api\.finka\.cn\/constants\/ios\? response-body-json-jq 'del(.data.splashAdNew, .data.activityView, .data.matchWebTabInfo, .data.adFeedParam, .data.prefetchResources)'
