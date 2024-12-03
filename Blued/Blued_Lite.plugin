@@ -1,5 +1,5 @@
 #!name = Blued精简
-#!desc = 精简Blued交友页面，仅保留年龄28岁以上的通讯录动态
+#!desc = 精简Blued交友页面，删除交友页面聊天室内容
 #!openUrl = https://apps.apple.com/app/id1451025748
 #!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Blued/icon.png
 #!tag = 页面精简
