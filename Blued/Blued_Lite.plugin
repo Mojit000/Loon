@@ -18,7 +18,7 @@
 ^https:\/\/argo\.blued\.cn\/ticktocks\/users\/\d+\?exclude_id=&filter=city response-body-json-jq '.data |= map(select(.age >= 27 and .age <= 40 and .weight >= 55 and .weight <= 75))'
 # Blued极速版：保留27-40岁，且BMI在18.5-24🌈的动态页面
 ^https:\/\/argo\.blued\.cn\/ticktocks\/users\/\d+\? response-body-json-jq '.data |= map(select(.age >= 27 and .age <= 40 and ((.weight / ((.height / 100) * (.height / 100))) >= 18.5 and (.weight / ((.height / 100) * (.height / 100))) <= 24)))'
-# Blued
+# 精简Blued身边页面聊天室，直播间
 ^https:\/\/social\.blued\.cn\/users\?birth_time response-body-json-del extra.adms_user extra.adms_operating extra.extra.nearby_dating
 ^https:\/\/argo\.blued\.cn\/ticktocks\/popups\? reject-dict
 ^https:\/\/argo\.blued\.cn\/ticktocks\/users\/feed\/diversion\?filter reject-dict
