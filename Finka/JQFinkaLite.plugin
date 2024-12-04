@@ -39,6 +39,8 @@
 # 精简访客页面
 ^https:\/\/api\.finka\.cn\/vas\/visitor\? response-body-json-jq 'del(.data.iosHideOptions, .data.iosPublicOptions, .data.visitorOptions)'
 
+^https:\/\/api\.finka\.cn\/mask-match\/config\? reject-dict
+
 [MITM]
 hostname = api.finka.cn
 
