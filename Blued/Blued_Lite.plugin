@@ -10,6 +10,8 @@
 
 
 [Rewrite]
+#移除同城页面“泡泡他”
+^https:\/\/argo\.blued\.cn\/ticktocks\/info\?bubble_state=&feed_ids=&filter=city reject-dict
 # 移除发现页面顶部Banner
 ^https:\/\/argo\.blued\.cn\/ticktocks\/discover\/recommend\? reject-dict
 # 精简：身边页面推荐直播
