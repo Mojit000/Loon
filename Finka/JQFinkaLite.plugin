@@ -37,7 +37,7 @@
 # ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label != "翻咔社区"))'
 ^https:\/\/api\.finka\.cn\/post\/rcmd\/list\? response-body-json-jq 'del(.data.adList, .data.tagList)' '.data.list |= map(select(.tabList | not))'
 # 精简访客页面
-^https:\/\/api\.finka\.cn\/vas\/visitor\? response-body-json-jq 'del(.data.iosHideOptions, .data.iosPublicOptions)'
+^https:\/\/api\.finka\.cn\/vas\/visitor\? response-body-json-jq 'del(.data.iosHideOptions, .data.iosPublicOptions, .data.visitorOptions)'
 
 [MITM]
 hostname = api.finka.cn
