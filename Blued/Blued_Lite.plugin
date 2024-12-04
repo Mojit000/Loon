@@ -10,6 +10,8 @@
 
 
 [Rewrite]
+# 移除发现页面顶部Banner
+^https:\/\/argo\.blued\.cn\/ticktocks\/discover\/recommend\? reject-dict
 # 精简：身边页面推荐直播
 ^https:\/\/argo\.blued\.cn\/users\/recommend reject-dict
 # Blued极速版：去除提示下载Blued的弹窗
