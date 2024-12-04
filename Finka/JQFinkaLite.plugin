@@ -10,14 +10,6 @@
 [Rule]
 
 [Rewrite]
-# Blued极速版：移除首页推荐直播
-^https:\/\/argo\.blued\.cn\/users\/recommend response-body-json-del data
-# Blued极速版：去除提示下载Blued的弹窗
-^https:\/\/argo\.blued\.cn\/blued\/config response-body-json-del data.social_image data.social_top_image
-# Blued极速版：保留27-40岁，且体重在55-75kg的动态页面
-^https:\/\/argo\.blued\.cn\/ticktocks\/users\/\d+\?exclude_id=&filter=city response-body-json-jq '.data |= map(select(.age >= 27 and .age <= 40 and .weight >= 55 and .weight <= 75))'
-# Blued极速版：保留27-40岁，且BMI在18.5-24🌈的动态页面
-# ^https:\/\/argo\.blued\.cn\/ticktocks\/users\/\d+\? response-body-json-jq '.data |= map(select(.age >= 27 and .age <= 40 and ((.weight / ((.height / 100) * (.height / 100))) >= 18.5 and (.weight / ((.height / 100) * (.height / 100))) <= 24)))'
 # 去广告
 # ^https:\/\/api\.finka\.cn\/inbox\/match\/newest\? reject-dict
 ^https:\/\/api\.finka\.cn\/ad\/? reject-dict
@@ -44,6 +36,9 @@
 # ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label != "话题活动"))'
 # ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label != "翻咔社区"))'
 ^https:\/\/api\.finka\.cn\/post\/rcmd\/list\? response-body-json-jq 'del(.data.adList, .data.tagList)' '.data.list |= map(select(.tabList | not))'
+# 精简访客页面
+^https:\/\/api\.finka\.cn\/vas\/visitor\? response-body-json-jq 'del(.data.iosHideOptions, .data.iosPublicOptions)'
+
 [MITM]
-hostname = api.finka.cn, argo.blued.cn
+hostname = api.finka.cn
 
