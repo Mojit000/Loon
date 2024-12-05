@@ -10,6 +10,7 @@
 
 
 [Rewrite]
+^https:\/\/social\.blued\.cn\/users\/\d+\/more\/ios\? response-body-json-jq '.data[0] |= del(.banner, .healthy, .healthy_ad, .healthy_banner, .vip_broadcast, .service)'
 #移除同城页面“泡泡他”
 ^https:\/\/argo\.blued\.cn\/ticktocks\/info\?bubble_state=&feed_ids=&filter=city reject-dict
 # 移除发现页面顶部Banner
@@ -27,7 +28,7 @@
 ^https:\/\/argo\.blued\.cn\/ticktocks\/popups\? reject-dict
 ^https:\/\/argo\.blued\.cn\/ticktocks\/users\/feed\/diversion\?filter reject-dict
 ^https:\/\/social\.blued\.cn\/users\/live\/recommend\?ai_last_uid reject-dict
-^https:\/\/social\.blued\.cn\/users\/\d+\/more\/ios\? response-body-json-jq '.data[0] |= del(.healthy_banner, .vip_broadcast, .service, .beans)'
+
 ^https:\/\/argo\.blued\.cn\/ticktocks\/users\/feed\/bubble response-body-json-del data
 # ^https:\/\/social\.blued\.cn\/users\?birth_time response-body-json-jq 
 'del(.extra.nearby_dating, .extra.adms_user, .extra.adms_operating)'
