@@ -27,7 +27,7 @@
 ^https:\/\/argo\.blued\.cn\/ticktocks\/popups\? reject-dict
 ^https:\/\/argo\.blued\.cn\/ticktocks\/users\/feed\/diversion\?filter reject-dict
 ^https:\/\/social\.blued\.cn\/users\/live\/recommend\?ai_last_uid reject-dict
-^https:\/\/social\.blued\.cn\/users\/102835986\/more\/ios\?v=2 response-body-json-jq 'del(.data[0].banner, .data[0].healthy, .data[0].vip_broadcast, .data[0].service, .data[0].beans)'
+^https:\/\/social\.blued\.cn\/users\/\d+\/more\/ios\?v=2 response-body-json-jq 'del(.data[0].banner, .data[0].healthy, .data[0].vip_broadcast, .data[0].service, .data[0].beans)'
 ^https:\/\/argo\.blued\.cn\/ticktocks\/users\/feed\/bubble response-body-json-del data
 # ^https:\/\/social\.blued\.cn\/users\?birth_time response-body-json-jq 
 'del(.extra.nearby_dating, .extra.adms_user, .extra.adms_operating)'
