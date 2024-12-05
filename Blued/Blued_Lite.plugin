@@ -9,7 +9,7 @@
 [Rule]
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Blued/Blued.list, policy=DIRECT, tag=Blued.list, enabled=true
 
-[Rewrite]
+[Body Rewrite]
 # 精简我的页面
 ^https:\/\/social\.blued\.cn\/users\/\d+\/more\/ios\? response-body-json-jq '.data[0] |= del(.banner, .healthy, .healthy_ad, .healthy_banner, .service)'
 
