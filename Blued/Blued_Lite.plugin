@@ -7,7 +7,7 @@
 #!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
 
 [Rule]
-
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Blued/Blued.list, policy=DIRECT, tag=Blued.list, enabled=true
 
 [Rewrite]
 # 精简我的页面
