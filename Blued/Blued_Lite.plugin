@@ -27,7 +27,7 @@
 
 [Body Rewrite]
 # 精简我的页面
-http-response-jq ^https:\/\/social\.blued\.cn\/users\/\d+\/more\/ios\?  '.data[0] |= del(.banner, .healthy, .healthy_ad, .healthy_banner, .service)'
+^https:\/\/social\.blued\.cn\/users\/\d+\/more\/ios\? response-body-json-jq '.data[0] |= del(.banner, .healthy, .healthy_ad, .healthy_banner, .service)'
 
 # 精简Blued身边页面聊天室，直播间
 ^https:\/\/social\.blued\.cn\/users\?birth_time response-body-json-del extra.adms_user extra.adms_operating extra.nearby_dating
