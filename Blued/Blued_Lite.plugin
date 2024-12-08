@@ -9,6 +9,8 @@
 [Rule]
 
 [Rewrite]
+# 移除推荐页面“聊天室”
+^https:\/\/argo\.blued\.cn\/ticktocks\/users\/\d+\/explore\? response-body-json-jq '.extra.explore_list |= .[:-1]'
 # 移除推荐页面顶部Banner
 ^https:\/\/argo\.blued\.cn\/blued\/explore reject-dict
 # 移除推荐页面广告
@@ -36,9 +38,6 @@
 ^https:\/\/social\.blued\.cn\/users\?birth_time response-body-json-del extra.adms_user extra.adms_operating extra.nearby_dating
 
 ^https:\/\/argo\.blued\.cn\/ticktocks\/users\/feed\/bubble response-body-json-del data
-
-# 移除推荐页面“聊天室”
-^https:\/\/argo\.blued\.cn\/ticktocks\/users\/\d+\/explore\? response-body-json-jq '.extra.explore_list |= .[:-1]'
 
 [Script]
 # 精简Blued动态页面
