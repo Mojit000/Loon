@@ -10,7 +10,7 @@
 
 [Rewrite]
 # 移除推荐页面“聊天室”
-^https:\/\/argo\.blued\.cn\/ticktocks\/users\/\d+\/explore\? response-body-json-jq '.extra.explore_list |= .[:-1]'
+# ^https:\/\/argo\.blued\.cn\/ticktocks\/users\/\d+\/explore\? response-body-json-jq '.extra.explore_list |= .[:-1]'
 # 移除推荐页面顶部Banner
 ^https:\/\/argo\.blued\.cn\/blued\/explore reject-dict
 # 移除推荐页面广告
