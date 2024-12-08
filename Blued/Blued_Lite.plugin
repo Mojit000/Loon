@@ -11,6 +11,8 @@
 [Rewrite]
 # 移除推荐页面顶部Banner
 ^https:\/\/argo\.blued\.cn\/blued\/explore reject-dict
+# 移除推荐页面广告
+^https:\/\/argo\.blued\.cn\/ticktocks\/users\/\d+\/explore\? response-body-json-jq '.data |= map(select(.is_ads != 1))'
 # 移除同城页面“泡泡他”
 # ^https:\/\/argo\.blued\.cn\/ticktocks\/info\?bubble_state=&feed_ids=&filter=city reject-dict
 
