@@ -7,6 +7,8 @@
 #!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
 
 [Rule]
+# 移除开屏广告
+URL-REGEX,"^https:\/\/argo\.blued\.cn\/blued\/splash\?",REJECT
 
 [Rewrite]
 # 移除推荐页面顶部Banner
