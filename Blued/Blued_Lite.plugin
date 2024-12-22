@@ -30,7 +30,7 @@ URL-REGEX,"^https:\/\/argo\.blued\.cn\/blued\/splash\?",REJECT
 ^https:\/\/social\.blued\.cn\/users\/live\/recommend\?ai_last_uid reject-dict
 
 # 移除推荐页面“聊天室”
-# ^https:\/\/argo\.blued\.cn\/ticktocks\/users\/\d+\/explore\? response-body-json-jq '.extra.explore_list |= .[:-1]'
+^https:\/\/argo\.blued\.cn\/ticktocks\/users\/\d+\/explore\? response-body-json-jq '.extra.explore_list |= .[:-1]'
 
 # 移除推荐页面广告
 ^https:\/\/argo\.blued\.cn\/ticktocks\/users\/\d+? response-body-json-jq '.data |= map(select(.is_ads != 1))'
