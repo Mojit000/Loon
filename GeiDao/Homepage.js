@@ -8,9 +8,9 @@ const lite_floors = [
     "key": "default_market",
     "market": {
       "hot_act": {
-            "title": "肯德基",
-            "img_url": "https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/KFC_Wordmark_RGB_White+Square.jpg",
-            "link_url": "gatgive://page.gat/web?url=https%3A%2F%2Ft.guanaitong.com%2FjxeMu0dp"
+            "title": "热门活动",
+            "img_url": "https://img1.guanaitong.com/grus-gfs/product/gat/by-days/2024-06-20/3c5440b8153e7938cec193ec596442d9.jpg",
+            "link_url": "https://cms.guanaitong.com/product/49/79.html"
           },
       "title": "热门商城",
       "more_link_title": "查看全部",
