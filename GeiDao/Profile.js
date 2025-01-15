@@ -8,6 +8,8 @@ if (url.includes("/api/v4/my/center")) {
     // 精简“我的”
     obj.data.aggregations = null
     obj.data.banners = null
+    obj.data.encourage = null
+    obj.data.card_package = null
   }
 }
 
