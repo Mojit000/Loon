@@ -32,7 +32,8 @@
 ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq '.data.innerFunction[0] |= .[0:-1]'
 # 精简动态页面
 # ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label != "翻咔社区" and .sponsorExtraInfo.label != "话题活动"))'
-^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label != "翻咔社区" and .sponsorExtraInfo.label != "话题活动" and .sponsorExtraInfo.label != "翻咔共创社区" and .sponsorExtraInfo.label != "翻咔共创计划" and .sponsorExtraInfo.label != "爱计划年历" and .sponsorExtraInfo.label != "盲盒交友"))'
+# ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label != "翻咔社区" and .sponsorExtraInfo.label != "话题活动" and .sponsorExtraInfo.label != "翻咔共创社区" and .sponsorExtraInfo.label != "翻咔共创计划" and .sponsorExtraInfo.label != "爱计划年历" and .sponsorExtraInfo.label != "盲盒交友"))'
+^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label | inside(["翻咔社区", "话题活动", "翻咔共创社区", "翻咔共创计划", "爱计划年历", "盲盒交友", "投稿互动"] | not)))'
 ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.type != "PostSpecialExposure" and (.boosting | not) and .type != "ShowCase"))'
 # ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label != "话题活动"))'
 # ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label != "翻咔社区"))'
