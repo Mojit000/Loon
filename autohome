@@ -1,2 +1,18 @@
+#!name = 汽车之家
+#!desc = 移除开屏广告、各类广告横幅、各类信息流广告、各类弹窗推广、各类浮窗、我的页面广告。
+#!openUrl = https://apps.apple.com/app/id385919493
+#!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Finka.png
+#!tag = 页面精简
+#!author = Mojit000[https://github.com/Mojit000]
+#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
+#!loon_version = 3.2.4(768)
+
+[Rule]
+
+[Rewrite]
+# 去广告
+^https:\/\/(a\.athm\.cn\/)?mobile\.app\.autohome\.com\.cn\/platform\/carserver\/carcard\/findEquitysV5 reject-dict
+^https:\/\/(a\.athm\.cn\/)?mobile\.app\.autohome\.com\.cn\/platform\/carserver\/carcard\/mycardv6 reject-dict
+
 
 hostname = a.athm.cn,adproxy.autohome.com.cn,apiautoappusc.che168.com,autoapi.autohome.com.cn,cars.app.autohome.com.cn,clientlive.api.autohome.com.cn,club.app.autohome.com.cn,dealer.m.autohome.com.cn,maam.pingan.com.cn,mobile.app.autohome.com.cn,news.app.autohome.com.cn,pcmx.autohome.com.cn
