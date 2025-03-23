@@ -1,2 +1,2 @@
 # 防DNS泄漏
-DOMAIN-KEYWORD,.,漏网之鱼
+URL-REGEX,"\.",漏网之鱼
