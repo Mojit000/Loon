@@ -1,5 +1,5 @@
 #!name = 翻咔社区
-#!desc = 保留直播热门标签；移除私信顶部匹配Banner；移除动态页面内的彩虹A+会员推荐、动态推广，官方企划；精简动态页面内的热门；精简资料页面；精简主页，移除定制Tab
+#!desc = 保留直播热门标签；移除私信顶部匹配Banner；移除动态页面内的彩虹A+会员推荐、官方推送，精简动态页面内的热门；精简资料页面；精简主页，移除定制Tab
 #!openUrl = https://apps.apple.com/app/id898533490
 #!icon = https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Finka.png
 #!tag = 页面精简
@@ -23,20 +23,23 @@
 # 精简翻咔页面
 ^https:\/\/api\.finka\.cn\/constants\/ios\? reject-dict
 # ^https:\/\/api\.finka\.cn\/constants\/ios\? response-body-json-jq 'del(.data.splashAdNew, .data.activityView, .data.matchWebTabInfo, .data.adFeedParam, .data.prefetchResources)'
+
 ^https:\/\/api\.finka\.cn\/vas\/tool-box\/get\? response-body-json-jq '.data.list |= map(select(.trackName != "NEW_NEARBY" and .trackName != "MEET_REMINDER"))'
-# 保留30-42岁，且BMI在18-27🌈的动态页面（有BUG）
+
+# 保留27-42岁，且BMI在18-27🌈的动态页面（有BUG）
 ^https:\/\/api\.finka\.cn\/user\/recommend\?_t=\d+&multiInfo=1 response-body-json-jq '.data.list |= map(select(((.user.weight / ((.user.height / 100) * (.user.height / 100))) >= 18 and (.user.weight / ((.user.height / 100) * (.user.height / 100))) <= 27)))'
-^https:\/\/api\.finka\.cn\/user\/recommend\?_t=\d+&multiInfo=1 response-body-json-jq '.data.list |= map(select(.user.age >= 30 and .user.age <= 40))'
+^https:\/\/api\.finka\.cn\/user\/recommend\?_t=\d+&multiInfo=1 response-body-json-jq '.data.list |= map(select(.user.age >= 27 and .user.age <= 42))'
+
 # 精简资料页面
 ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq 'del(.data.featuredServicesList, .data.adMoreUrl, .data.ad, .data.valueEquityTopList, .data.profilePasterAd, .data.outFunctionList)'
 ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq '.data.innerFunction[0] |= .[0:-1]'
-# 精简动态页面
+
+# 精简动态页面官方推送信息
 ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq 'del(.data.list[] | select(has("sponsorExtraInfo")))'
-# ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label != "翻咔社区" and .sponsorExtraInfo.label != "话题活动" and .sponsorExtraInfo.label != "翻咔共创社区" and .sponsorExtraInfo.label != "翻咔共创计划" and .sponsorExtraInfo.label != "爱计划年历" and .sponsorExtraInfo.label != "盲盒交友" and .sponsorExtraInfo.label != "投稿互动" and .sponsorExtraInfo.label != "互动话题"))'
-# ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label | inside(["翻咔社区", "话题活动", "翻咔共创社区", "翻咔共创计划", "爱计划年历", "盲盒交友","互动话题", "投稿互动"]) | not))'
+
+# 精简动态页面彩虹推荐
 ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.type != "PostSpecialExposure" and (.boosting | not) and .type != "ShowCase"))'
-# ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label != "话题活动"))'
-# ^https:\/\/api\.finka\.cn\/feed\/v5\? response-body-json-jq '.data.list |= map(select(.sponsorExtraInfo.label != "翻咔社区"))'
+
 ^https:\/\/api\.finka\.cn\/post\/rcmd\/list\? response-body-json-jq 'del(.data.adList, .data.tagList)' '.data.list |= map(select(.tabList | not))'
 # 精简访客页面
 ^https:\/\/api\.finka\.cn\/vas\/visitor\? response-body-json-jq 'del(.data.iosHideOptions, .data.iosPublicOptions, .data.visitorOptions)'
