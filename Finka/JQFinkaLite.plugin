@@ -31,7 +31,7 @@
 ^https:\/\/api\.finka\.cn\/user\/recommend\?_t=\d+&multiInfo=1 response-body-json-jq '.data.list |= map(select(.user.age >= 27 and .user.age <= 42))'
 
 # 精简资料页面
-^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq 'del(.data.featuredServicesList, .data.adMoreUrl, .data.ad, .data.valueEquityTopList, .data.profilePasterAd, .data.outFunctionList)'
+^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq 'del(.data.vasEntranceInfo,.data.featuredServicesList, .data.adMoreUrl, .data.ad, .data.valueEquityTopList, .data.profilePasterAd, .data.outFunctionList)'
 ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? response-body-json-jq '.data.innerFunction[0] |= .[0:-1]'
 
 # 精简动态页面官方推送信息
