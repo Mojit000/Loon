@@ -10,6 +10,42 @@
 # 移除开屏广告
 URL-REGEX,"^https?:\/\/(argo|social)\.blued\.cn\/blued\/splash\?",REJECT
 
+# 使用参数中的Proxy
+DOMAIN-SUFFIX,blued.cn,PROXY
+DOMAIN-SUFFIX,bluedgames.cn,PROXY
+DOMAIN-SUFFIX,bluedimg.cn,PROXY
+DOMAIN-SUFFIX,budimg.cn,PROXY
+DOMAIN-SUFFIX,danlancare.cn,PROXY
+DOMAIN-SUFFIX,danlanlove.cn,PROXY
+DOMAIN-SUFFIX,irisgw.cn,PROXY
+DOMAIN-SUFFIX,ourbluecity.cn,PROXY
+DOMAIN-SUFFIX,xiaogegelive.cn,PROXY
+DOMAIN-SUFFIX,xiaogegelive.cn,PROXY
+DOMAIN-SUFFIX,bf99.com,PROXY
+DOMAIN-SUFFIX,yijian-app.cn,PROXY
+DOMAIN-SUFFIX,bldimg.com,PROXY
+DOMAIN-SUFFIX,bldlive.com,PROXY
+DOMAIN-SUFFIX,blue-city.com,PROXY
+DOMAIN-SUFFIX,blued.com,PROXY
+DOMAIN-SUFFIX,bluedgames.com,PROXY
+DOMAIN-SUFFIX,bluedimg.com,PROXY
+DOMAIN-SUFFIX,caihongqi.com,PROXY
+DOMAIN-SUFFIX,danlancare.com,PROXY
+DOMAIN-SUFFIX,danlanlove.com,PROXY
+DOMAIN-SUFFIX,fleeper.com,PROXY
+DOMAIN-SUFFIX,fleeper.com,PROXY
+DOMAIN-SUFFIX,irisdt.com,PROXY
+DOMAIN-SUFFIX,irisgw.com,PROXY
+DOMAIN-SUFFIX,ourbluecity.com,PROXY
+DOMAIN-SUFFIX,xiaogegelive.com,PROXY
+DOMAIN-SUFFIX,xiaolanapp.com,PROXY
+DOMAIN-SUFFIX,yijian-app.com,PROXY
+DOMAIN-SUFFIX,blued.cdn-gw-dv.net,PROXY
+DOMAIN-SUFFIX,blued.gw-dv.net,PROXY
+DOMAIN-SUFFIX,irisdt.net,PROXY
+DOMAIN-SUFFIX,irisgw.net,PROXY
+DOMAIN-SUFFIX,irisgw.net,PROXY
+
 [Rewrite]
 # 移除推荐页面顶部Banner
 ^https?:\/\/(argo|social)\.blued\.cn\/blued\/explore reject-dict
