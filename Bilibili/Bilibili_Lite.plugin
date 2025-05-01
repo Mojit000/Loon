@@ -11,6 +11,7 @@
 [Rewrite]
 ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? response-body-json-jq '.data.sections_v2[1].style = 1'
 ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? response-body-json-del data.sections_v2[1].title data.sections_v2[1].items[4]
+^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? response-body-json-jq '(.data.sections_v2[1].items) |= ([.[2], .[3]] + .[0:2])'
 
 [Script]
 # 精简 Bilibili 国际版“我的”页面
