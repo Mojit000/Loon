@@ -7,40 +7,28 @@
 # DOMAIN-SUFFIX: 45
 # TOTAL: 51
 # > MiCu Emby（代理，端口号：443）
-DOMAIN-SUFFIX,media.micu.hk,Media
-
-# > MiCu Emby（直连，端口号：443）
-DOMAIN-SUFFIX,micu.hk,DIRECT
+DOMAIN-SUFFIX,media.micu.hk
 
 # > Zox Emby
-DOMAIN-SUFFIX,zox.show,Media
-
-# > 莉利娅Emby（直连，端口号：80）
-DOMAIN,jp.lilyemby.my,DIRECT
-
-# > 莉利娅Emby（直连，端口号：443）
-DOMAIN,hk.lilyemby.my,DIRECT
+DOMAIN-SUFFIX,zox.show
 
 # > 莉利娅Emby（CDN，端口号：443）
-DOMAIN,cdn.lilyemby.my,Media
+DOMAIN,cdn.lilyemby.my
 
 # > 莉利娅Emby（海外，端口号：443）
-DOMAIN,cf.lilyemby.my,Media
+DOMAIN,cf.lilyemby.my
 
 # > 哪吒云Emby（直连，端口号：443）
-DOMAIN-SUFFIX,nezhasu.com,Media
+DOMAIN-SUFFIX,nezhasu.com
 
 # > 69云Emby（直连，端口号：18690）
-DOMAIN,emby.69yun69.com,DIRECT
-
-# > 流星Emby（直连，端口号：44279）
-DOMAIN,emby.060618.me,DIRECT
+DOMAIN,emby.69yun69.com
 
 # > 流星Emby（CDN，端口号：443）
-DOMAIN,embyhw2.liustar.click,Media
+DOMAIN,embyhw2.liustar.click
 
 # > 微斯人Emby（CF路线，端口号：443）
-DOMAIN,tv.ash.yt,Media
+DOMAIN,tv.ash.yt
 
 # > 微斯人Emby（SG中转，端口号：13524）
-DOMAIN,ashtv.huajia.xyz,Media
+DOMAIN,ashtv.huajia.xyz
