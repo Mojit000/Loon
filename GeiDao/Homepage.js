@@ -15,9 +15,9 @@ const lite_floors = [
       "title": "热门商城",
       "more_link_title": "查看全部",
       "topic_act": {
-            "title": "奈雪の茶",
-            "img_url": "https://file.guanaitong.com/grus-gfs/product/app-mgr/by-days/2024-04-18/8ab0055763dea2976ddad207cc1a5687.png",
-            "link_url": "gatgive://page.gat/web?url=https%3A%2F%2Ft.guanaitong.com%2F6JETXjGg"
+            "title": "肯德基",
+            "img_url": "https://img1.guanaitong.com/app/icons/06/15/20091470_m.png",
+            "link_url": "gatgive://page.gat/web?url=https%3A%2F%2Ft.guanaitong.com%2FjxeMu0dp"
           },
       "more_link_url": "https://m.igeidao.com/home/display_zone?type=2",
       "values": [
