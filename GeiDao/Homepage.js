@@ -16,7 +16,7 @@ const lite_floors = [
       "more_link_title": "查看全部",
       "topic_act": {
             "title": "肯德基",
-            "img_url": "https://img1.guanaitong.com/app/icons/06/15/20091470_m.png",
+            "img_url": "https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/GeiDao/KFC%20Logo.png",
             "link_url": "gatgive://page.gat/web?url=https%3A%2F%2Ft.guanaitong.com%2FjxeMu0dp"
           },
       "more_link_url": "https://m.igeidao.com/home/display_zone?type=2",
